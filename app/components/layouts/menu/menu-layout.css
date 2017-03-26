@@ -1,0 +1,51 @@
+.menu-container {
+    width: 59px;
+    height: 100%;
+    background: #2a3d51;
+    border-top: 1px solid #172431;
+    border-right: 1px solid #172431;
+}
+
+.nav-link {
+    display: block;
+    padding: 30px 0;
+    cursor: pointer;
+}
+
+.home {
+    background: url(../../images/home.svg) no-repeat center;
+}
+
+.messages {
+    background: url(../../images/2.svg) no-repeat 34px 14px,
+                url(../../images/ellipse.svg) no-repeat 21px 3px,
+                url(../../images/message.svg) no-repeat center;
+}
+
+.image {
+    background: url(../../images/image.svg) no-repeat center;
+}
+
+.nav-link:active,
+.nav-link:hover {
+    box-shadow: inset 0 1px 0 0 #0f222d,
+                inset 0 2px 0 0 #03060b;
+}
+
+.home:active,
+.home:hover {
+    background: #13202c url(../../images/home_active.svg) no-repeat center;
+}
+
+.messages:active,
+.messages:hover {
+    background: url(../../images/2.svg) no-repeat 34px 14px,
+                url(../../images/ellipse.svg) no-repeat 21px 3px,
+                url(../../images/message_active.svg) no-repeat center;
+    background-color: #13202c;
+}
+
+.image:active:active,
+.image:hover:hover {
+    background: #13202c url(../../images/image_active.svg) no-repeat center;
+}

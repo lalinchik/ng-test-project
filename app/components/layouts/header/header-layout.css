@@ -1,0 +1,102 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 78px;
+    padding: 0 25px 0 15px;
+    background: #253343;
+    border-top: 1px solid #172431;
+    border-bottom: 1px solid #172431;
+}
+
+.upload-field-label{
+    position: relative;
+    display: block;
+    width: 346px;
+    height: 34px;
+    overflow:hidden;
+    background:#202f3f;
+    border: 1px dashed #627991;
+    border-radius: 20px;
+    color: #627991;
+    font: 14px "Open Sans", sans-serif;
+    text-align: center;
+    line-height: 34px;
+}
+
+.upload-field {
+    width: 346px;
+    height: 34px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    filter:alpha(opacity:0);
+    overflow: hidden;
+    cursor:pointer;
+}
+
+.upload-field-placeholder { color: #4c78b5; }
+
+.search {
+    flex-grow: 1;
+    position: relative;
+    margin-left: 15px;
+}
+
+.search-field {
+    width: 307px;
+    height: 34px;
+    padding-left: 38px;
+    font: italic 14px Open Sans, sans-serif;
+    color: #627991;
+    background: #172431;
+    border: none;
+    border-radius: 20px;
+}
+
+.search-field:focus { outline: none; }
+
+.icon-search {
+    color: #627991;
+    position: absolute;
+    top: 9px;
+    left: 12px;
+}
+
+::-webkit-input-placeholder { color: #627991; }
+::-moz-placeholder          { color: #627991; }
+:-moz-placeholder           { color: #627991; }
+:-ms-input-placeholder      { color: #627991; }
+
+.login-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-link:hover,
+.login-link:active {
+    text-decoration: none;
+}
+
+.photo {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+    background: url(../../images/user.svg) no-repeat center;
+}
+
+.login-link:hover .photo,
+.login-link:active .photo {
+    background: url(../../images/user_active.svg) no-repeat center 1px;
+}
+
+.login-text {
+    font: 18px "Open Sans", sans-serif;
+    color: #5a88b9;
+}
+
+.login-link:hover .login-text,
+.login-link:active .login-text { color: #c8ecff; }

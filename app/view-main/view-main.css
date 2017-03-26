@@ -1,0 +1,32 @@
+.view-main-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.right-column {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+}
+
+ts-header {
+    flex: 1;
+}
+
+.image-container {
+    width: 744px;
+    height: calc(100% - 80px);
+    padding: 16px;
+    background: red;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+}
+
+.tab-container {
+    width: 216px;
+    background: blue;
+}
