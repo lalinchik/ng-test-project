@@ -11,6 +11,9 @@ import './header-layout.css';
  * @description Header layout component
  */
 export default {
+  bindings: {
+    onLoadFile: '&'
+  },
   template,
   controller,
   controllerAs: 'view'

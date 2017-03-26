@@ -7,6 +7,11 @@
  */
 export default class MainCtrl {
   /*@ngInject*/
-  constructor($injector) {
+  constructor($injector, $scope) {
+
+  }
+
+  onLoadFile(src) {
+    this.src = src;
   }
 }

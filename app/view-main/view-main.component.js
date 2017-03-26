@@ -1,4 +1,5 @@
 import template from './view-main.tmpl.html';
+import controller from './view-main.controller';
 
 /**
  * @ngdoc directive
@@ -11,6 +12,6 @@ import template from './view-main.tmpl.html';
  */
 export default {
   template,
-  controller: MainCtrl,
+  controller,
   controllerAs: 'view'
 };
