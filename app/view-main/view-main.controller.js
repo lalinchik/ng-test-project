@@ -7,11 +7,15 @@
  */
 export default class MainCtrl {
   /*@ngInject*/
-  constructor($injector, $scope) {
-
+  constructor($injector) {
+    this.Notes = $injector.get('NotesFct');
   }
 
   onLoadFile(src) {
     this.src = src;
+  }
+
+  $onInit() {
+    this.notes = this.Notes.query();
   }
 }

@@ -2,6 +2,7 @@ const webpack           = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path              = require('path');
 
 const srcPath    = path.join(__dirname, 'app');
@@ -13,6 +14,7 @@ const devTools = !production;
 const dstPath    = 'distrib';
 const fontsPath  = '/fonts/';
 const imagesPath = '/images/';
+const db         = '/db/';
 
 const common = require(`${ srcPath }/vendors`);
 
@@ -108,6 +110,10 @@ const webpackConfig = module.exports = {
 const commonChunkPlugin = new webpack.optimize.CommonsChunkPlugin('common', 'common.js');
 
 webpackConfig.plugins.push(commonChunkPlugin);
+webpackConfig.plugins.push(new CopyWebpackPlugin([
+  { from: srcPath + '/notes.json' }])
+);
+
 
 if (production) {
   webpackConfig.output.publicPath = 'angular_courses/';
