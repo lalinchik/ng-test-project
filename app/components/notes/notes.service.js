@@ -11,7 +11,7 @@
 
 export default /*@ngInject*/$injector => {
   const $resource = $injector.get('$resource');
-  const Notes = $resource('notes.json', {}, {
+  const Notes = $resource('https://test-project-d869a.firebaseio.com//.json', {}, {
     query: {
       method: 'GET',
       isArray: true

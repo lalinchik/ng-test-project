@@ -9,6 +9,7 @@ export default class MainCtrl {
   /*@ngInject*/
   constructor($injector) {
     this.Notes = $injector.get('NotesFct');
+    this.isAddTagPopupShow = false;
   }
 
   onLoadFile(src) {
@@ -17,5 +18,9 @@ export default class MainCtrl {
 
   $onInit() {
     this.notes = this.Notes.query();
+  }
+
+  openAddTagPopup(){
+    return this.isAddTagPopupShow = !this.isAddTagPopupShow;
   }
 }

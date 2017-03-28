@@ -1,7 +1,6 @@
 .view-main-container {
     display: flex;
     justify-content: center;
-    height: 100vh;
 }
 
 .right-column {
@@ -17,6 +16,7 @@ ts-header {
 .image-container {
     width: 744px;
     height: calc(100% - 80px);
+    position: relative;
     padding: 16px;
 }
 
@@ -27,10 +27,15 @@ ts-header {
 
 .tab-container {
     width: 216px;
-    padding: 15px 10px;
     background: #efefef;
     box-shadow: inset 1px 0 5px 0 #d9d9d9;
 }
+
+.radio-container {
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+}
+
 .radio {
     vertical-align: top;
     width: 17px;
@@ -85,4 +90,22 @@ ts-header {
     font: bold 12px Open Sans, sans-serif;
     color: #666;
     margin-right: 17px;
+}
+
+.note-list-item {
+    display: flex;
+    padding: 15px;
+    font: 12px Open Sans, sans-serif;
+    color: #666;
+    border-bottom: 1px solid #fff;
+}
+
+.list-mark {
+    display: inline-block;
+    width: 12px;
+    height: 13px;
+    margin-right: 10px;
+    background: url(../components/images/note_active.png) no-repeat;
+    background-size: contain;
+
 }
