@@ -100,12 +100,12 @@ ts-header {
     border-bottom: 1px solid #fff;
 }
 
-.list-mark {
+.note-list-item::before{
+    content: '';
     display: inline-block;
     width: 12px;
     height: 13px;
     margin-right: 10px;
     background: url(../components/images/note_active.png) no-repeat;
     background-size: contain;
-
 }

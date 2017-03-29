@@ -29,7 +29,7 @@
 }
 
 .popup-value {
-    width: 262px;
+    width: 260px;
     height: 65px;
 }
 
@@ -56,11 +56,11 @@
     cursor: pointer;
 }
 
-.button-controls-ok {
+.btn-submit {
     background: #339966;
 }
 
-.button-controls-cancel{
+.btn-cancel{
     background: rgba(42, 61, 81, 0.83);
 
 }

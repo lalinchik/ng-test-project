@@ -7,9 +7,14 @@
  */
 export default class MainCtrl {
   /*@ngInject*/
-  constructor($injector) {
+  constructor($injector, $scope) {
+    this.$scope = $scope;
     this.Notes = $injector.get('NotesFct');
     this.isAddTagPopupShow = false;
+
+    $scope.$on('closePopup', (event, args) => {
+      this.isAddTagPopupShow = args.isAddTagPopupShow;
+    });
   }
 
   onLoadFile(src) {
@@ -20,7 +25,8 @@ export default class MainCtrl {
     this.notes = this.Notes.query();
   }
 
-  openAddTagPopup(){
+  openAddTagPopup() {
     return this.isAddTagPopupShow = !this.isAddTagPopupShow;
   }
+
 }

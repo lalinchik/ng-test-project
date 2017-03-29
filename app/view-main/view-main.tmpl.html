@@ -10,15 +10,14 @@
         </div>
         <div class="tab-container">
             <form class="radio-container">
-                <input id="note-list-latest" class="radio" type="radio" name="note-list" value="latest">
+                <input id="note-list-latest" class="radio" type="radio" name="note-list" value="latest" checked>
                 <label class="radio-label" for="note-list-latest">Latest</label>
                 <input id="note-list-all" class="radio" type="radio" name="note-list" value="all">
                 <label class="radio-label" for="note-list-all">All</label>
             </form>
             <ul class="note-list">
                 <li class="note-list-item" ng-repeat="note in view.notes">
-                    <span class="list-mark"></span>
-                    <span class="list-text">{{ note.note }}</span>
+                    {{ note.note }}
                 </li>
             </ul>
         </div>
