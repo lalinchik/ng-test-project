@@ -39,6 +39,10 @@
     "webpack": "~1.13.0",
     "webpack-dev-server": "~1.15.x",
     "yargs": "~4.8.x",
-    "copy-webpack-plugin": "^4.0.1"
+    "copy-webpack-plugin": "^4.0.1",
+    "angularfire": "1.2.0"
+  },
+  "dependencies": {
+    "firebase": "2.2.9"
   }
 }

@@ -1,5 +1,4 @@
 import angular from 'angular';
-import ngResource from 'angular-resource';
 import Notes from './notes.service'
 
 /**
@@ -9,8 +8,6 @@ import Notes from './notes.service'
  * @description
  * Module for notes models
  */
-export default angular.module('tsNotes', [
-  ngResource
-])
+export default angular.module('tsNotes', [])
   .factory('NotesFct', Notes)
   .name;
