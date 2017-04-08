@@ -15,6 +15,11 @@ export default class MainCtrl {
     $scope.$on('closePopup', (event, args) => {
       this.isAddTagPopupShow = args.isAddTagPopupShow;
     });
+
+    $scope.$on('addNewTag', (event, args) => {
+      this.isAddTagPopupShow = args.isAddTagPopupShow;
+      this.Notes.$add({ note : args.notes });
+    });
   }
 
   onLoadFile(src) {
@@ -22,7 +27,7 @@ export default class MainCtrl {
   }
 
   $onInit() {
-    this.notes = this.Notes.query();
+    this.notes = this.Notes;
   }
 
   openAddTagPopup() {

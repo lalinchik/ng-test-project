@@ -4,10 +4,10 @@
     </div>
     <div class="popup-main">
         <span class="popup-label">Notes:</span>
-        <textarea class="popup-value"></textarea>
+        <textarea class="popup-value" ng-model="view.noteText"></textarea>
     </div>
     <div class="popup-footer">
-        <button class="button-controls btn-submit">OK</button>
-        <button class="button-controls btn-cancel" ng-click="view.handleClick()">Cancel</button>
+        <button class="button-controls btn-submit" ng-click="view.handleClickSubmitButton()">OK</button>
+        <button class="button-controls btn-cancel" ng-click="view.handleClickCancelButton()">Cancel</button>
     </div>
 </div>

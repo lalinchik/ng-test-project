@@ -11,7 +11,14 @@ export default class AddTagCtrl {
     this.$scope = $scope;
   }
 
-  handleClick() {
+  handleClickCancelButton() {
     this.$scope.$emit('closePopup', { isAddTagPopupShow: false });
+  }
+
+  handleClickSubmitButton() {
+    this.$scope.$emit('addNewTag', {
+      notes: this.noteText,
+      isAddTagPopupShow: false
+    });
   }
 }
