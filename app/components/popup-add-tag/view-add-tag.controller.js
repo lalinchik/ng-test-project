@@ -9,16 +9,27 @@ export default class AddTagCtrl {
   /*@ngInject*/
   constructor($injector, $scope) {
     this.$scope = $scope;
+    this.offsetX;
+    this.offsetY;
+
+    this.$onChanges = function (changes) {
+      this.offsetX = changes.offsetX.currentValue;
+      this.offsetY = changes.offsetY.currentValue;
+    }
   }
 
   handleClickCancelButton() {
-    this.$scope.$emit('closePopup', { isAddTagPopupShow: false });
+    this.$scope.$emit('closePopup', {
+      isAddTagPopupShow: false
+    });
   }
 
   handleClickSubmitButton() {
     this.$scope.$emit('addNewTag', {
       notes: this.noteText,
-      isAddTagPopupShow: false
+      isAddTagPopupShow: false,
+      offsetX: this.offsetX,
+      offsetY: this.offsetY
     });
   }
 }

@@ -11,6 +11,7 @@ export default class MainCtrl {
     this.$scope = $scope;
     this.Notes = $injector.get('NotesFct');
     this.isAddTagPopupShow = false;
+    this.lastClick = {};
 
     $scope.$on('closePopup', (event, args) => {
       this.isAddTagPopupShow = args.isAddTagPopupShow;
@@ -18,7 +19,13 @@ export default class MainCtrl {
 
     $scope.$on('addNewTag', (event, args) => {
       this.isAddTagPopupShow = args.isAddTagPopupShow;
-      this.Notes.$add({ note : args.notes });
+      this.Notes.$add({
+        note: args.notes,
+        coordinates: {
+          offsetX: args.offsetX,
+          offsetY: args.offsetY
+        }
+      });
     });
   }
 
@@ -30,8 +37,10 @@ export default class MainCtrl {
     this.notes = this.Notes;
   }
 
-  openAddTagPopup() {
-    return this.isAddTagPopupShow = !this.isAddTagPopupShow;
+  openAddTagPopup($event) {
+    this.lastClick.x = $event.offsetX;
+    this.lastClick.y = $event.offsetY;
+    this.isAddTagPopupShow = !this.isAddTagPopupShow;
   }
 
 }

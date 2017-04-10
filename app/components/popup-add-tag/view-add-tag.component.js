@@ -13,5 +13,9 @@ import './view-add-tag.css';
 export default {
   template,
   controller,
-  controllerAs: 'view'
+  controllerAs: 'view',
+  bindings: {
+    offsetX: '<',
+    offsetY: '<'
+  }
 };
