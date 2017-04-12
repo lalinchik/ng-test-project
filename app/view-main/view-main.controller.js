@@ -7,7 +7,7 @@
  */
 export default class MainCtrl {
   /*@ngInject*/
-  constructor($injector, $scope) {
+  constructor($injector, $scope, $compile) {
     this.$scope = $scope;
     this.Notes = $injector.get('NotesFct');
     this.isAddTagPopupShow = false;
