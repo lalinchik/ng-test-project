@@ -7,11 +7,13 @@
  */
 export default class MainCtrl {
   /*@ngInject*/
-  constructor($injector, $scope, $compile) {
+  constructor($injector, $scope) {
     this.$scope = $scope;
     this.Notes = $injector.get('NotesFct');
     this.isAddTagPopupShow = false;
     this.lastClick = {};
+    this.isActive = false;
+    this.activeId = '';
 
     $scope.$on('closePopup', (event, args) => {
       this.isAddTagPopupShow = args.isAddTagPopupShow;
@@ -43,4 +45,8 @@ export default class MainCtrl {
     this.isAddTagPopupShow = !this.isAddTagPopupShow;
   }
 
+  handleTagClick($id) {
+    this.isActive = true;
+    this.activeId = $id;
+  }
 }

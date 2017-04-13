@@ -6,8 +6,12 @@
         <ts-header on-load-file="view.onLoadFile(src)"></ts-header>
         <div class="image-container">
             <img class="main-image" ng-src="{{ view.src }}" ng-click="view.openAddTagPopup($event)">
-            <ts-add-tag ng-if="view.isAddTagPopupShow" offset-x="view.lastClick.x" offset-y="view.lastClick.y"></ts-add-tag>
-            <ts-tag ng-repeat="note in view.notes" element-coordinates="note.coordinates">
+            <ts-add-tag ng-if="view.isAddTagPopupShow" offset-x="view.lastClick.x"
+                        offset-y="view.lastClick.y"></ts-add-tag>
+            <ts-tag ng-repeat="note in view.notes" element-coordinates="note.coordinates"
+                    ng-click="view.handleTagClick(note.$id)"
+                    ng-class="{active: view.isActive && note.$id === view.activeId}"
+                    class="tag">
             </ts-tag>
         </div>
         <div class="tab-container">
@@ -18,7 +22,9 @@
                 <label class="radio-label" for="note-list-all">All</label>
             </form>
             <ul class="note-list">
-                <li class="note-list-item" ng-repeat="note in view.notes">
+                <li class="note-list-item" ng-repeat="note in view.notes"
+                    ng-click="view.handleTagClick(note.$id)"
+                    ng-class="{active: view.isActive && note.$id === view.activeId}">
                     {{ note.note }}
                 </li>
             </ul>
