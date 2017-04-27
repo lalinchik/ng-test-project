@@ -7,7 +7,7 @@
  */
 export default class AddTagCtrl {
   /*@ngInject*/
-  constructor($injector, $scope) {
+  constructor($scope) {
     this.$scope = $scope;
     this.offsetX;
     this.offsetY;

@@ -13,7 +13,6 @@ export default class MainCtrl {
     this.isAddTagPopupShow = false;
     this.lastClick = {};
     this.isActive = false;
-    this.activeId = '';
 
     $scope.$on('closePopup', (event, args) => {
       this.isAddTagPopupShow = args.isAddTagPopupShow;

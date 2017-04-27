@@ -1,6 +1,6 @@
 /**
  * @ngdoc service
- * @name crsRouter.routerFct
+ * @name tsRouter.routerFct
  *
  * @description
  */
@@ -18,7 +18,7 @@ export default function () {
       /**
        * @ngdoc method
        * @methodOf crsRouter.routerFct
-       * @name crsRouter.routerFct#init
+       * @name tsRouter.routerFct#init
        *
        * @description Init state watcher for access purposes
        */
@@ -29,7 +29,7 @@ export default function () {
 
       /**
        * @ngdoc method
-       * @name crsRouter.routerFct#letsWork
+       * @name tsRouter.routerFct#letsWork
        * @methodOf crsRouter.routerFct
        *
        * @description This method jumps to default sate or state to which UI should back after login (using URL parameters)
