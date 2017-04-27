@@ -13,9 +13,9 @@ export default class HeaderCtrl {
   }
 
   onLoad(src) {
-    this.Notes.length = 0;
     this.onLoadFile({ src });
     this.Picture.image = src;
     this.Picture.$save();
+    this.Notes.forEach((note, idx) => this.Notes.$remove(this.Notes[idx]));
   }
 }
