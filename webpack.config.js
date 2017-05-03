@@ -40,6 +40,15 @@ const webpackConfig = module.exports = {
   },
 
   module : {
+    preLoaders: [
+      {
+        test   : /^((?!\.min).)*\.js$/,
+        exclude: /node_modules/,
+        loaders: [
+          'eslint?failOnError=true'
+        ]
+      }
+    ],
     loaders: [
       {
         test   : /^((?!\.min).)*\.js$/,

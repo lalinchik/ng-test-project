@@ -1,5 +1,5 @@
 import angular from 'angular';
-import Notes from './notes.service'
+import Notes from './notes.service';
 
 /**
  * @ngdocs overview

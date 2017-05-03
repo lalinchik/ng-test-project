@@ -1,2 +1,3 @@
-import module from './directives.module';
+import module from './direct.module';
+
 export default module;

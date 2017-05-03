@@ -1,18 +1,17 @@
 export default function () {
   return {
     scope: {
-      fileread: '&'
+      tsFileread: '&'
     },
-    link: function (scope, element) {
-      element.bind('change', function (changeEvent) {
+    link(scope, element) {
+      element.bind('change', changeEvent => {
         const reader = new FileReader();
+
         reader.onload = function (loadEvent) {
-          scope.$apply(function () {
-            scope.fileread({src: loadEvent.target.result});
-          });
+          scope.tsFileread({ src: loadEvent.target.result });
         };
         reader.readAsDataURL(changeEvent.target.files[0]);
       });
     }
-  }
-};
+  };
+}

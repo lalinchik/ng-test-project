@@ -9,13 +9,11 @@ export default class AddTagCtrl {
   /*@ngInject*/
   constructor($scope) {
     this.$scope = $scope;
-    this.offsetX;
-    this.offsetY;
 
     this.$onChanges = function (changes) {
       this.offsetX = changes.offsetX.currentValue;
       this.offsetY = changes.offsetY.currentValue;
-    }
+    };
   }
 
   handleClickCancelButton() {

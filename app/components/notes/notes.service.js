@@ -14,7 +14,7 @@ export default /*@ngInject*/$injector => {
   const $firebaseArray = $injector.get('$firebaseArray');
 
   const FBURL = $injector.get('FBURL');
-  const Notes = $firebaseArray(new Firebase(`${FBURL}/notes`));
+  const Notes = $firebaseArray(new Firebase(`${ FBURL }/notes`));
 
   return Notes;
 };

@@ -1,5 +1,5 @@
 import angular from 'angular';
-import Picture from './picture.service'
+import Picture from './picture.service';
 
 /**
  * @ngdocs overview
