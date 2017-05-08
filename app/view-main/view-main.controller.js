@@ -10,6 +10,7 @@ export default class MainCtrl {
   constructor($injector, $scope) {
     this.$scope = $scope;
     this.Notes = $injector.get('NotesFct');
+    this.Picture = $injector.get('PictureFct');
     this.isAddTagPopupShow = false;
     this.lastClick = {};
     this.isActive = false;
@@ -36,6 +37,7 @@ export default class MainCtrl {
 
   $onInit() {
     this.notes = this.Notes;
+    this.Picture.$loaded(picture => this.src = picture.image); // eslint-disable-line
   }
 
   openAddTagPopup($event) {
